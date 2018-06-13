@@ -1,0 +1,251 @@
+html{
+	background-color:#D3D3D3;
+	padding-top:15px;
+	padding-bottom:15px;
+}
+body{
+	margin:0 auto; 
+	width:70%;
+	border-radius:5px;
+background-color:white;
+
+}
+
+.container{
+    margin:0 auto; 
+	width:98%;
+	padding-top:3px;
+background-color:white;
+
+}
+h1{
+	font-family:impact;
+}
+h2{
+	color:#5F9EA0;
+}
+img{
+	border-radius:5px;
+}
+.head{
+	color:white;
+	text-align:center;
+	background-color:#5F9EA0;
+	border-radius:5px;
+}
+.head h2{
+	color:white;
+}
+#registerTAG{
+	color:#purple;
+	height:10%;
+	border-radius:5px;font-weight:bold;
+}
+.row1{
+	height:8%;
+	width:100%;
+	float:left;
+	border-radius:5px;
+}
+.col2{
+	width:50%;
+	height:100%;
+	float:left;
+}
+.col1{
+	width:45%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+	
+	}
+#loginbutton{
+	color:white;font-weight:bold;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:20px;padding:10px;
+}	
+.row2{
+	height:550px;;
+	width:100%;
+	float:left;
+	border-radius:5px;
+}
+.col4{
+	width:55%;
+	height:100%;
+	float:left;
+	border-radius:5px;
+}
+.col3{
+	width:40%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	}
+	.col3 input{
+		border-radius:5px;
+	}
+span{font-weight:bold;
+	color:white;
+	font-size:20px;
+}
+#register{
+	color:white;
+}
+#registerbutton{
+	color:white;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+}
+.loginform{
+	padding-top:60px;
+}
+.loginform input{
+	border-radius:5px;
+}
+.bot{
+	background-color:#5F9EA0;
+	height:80px;
+	width:100%;
+	border-radius:5px;
+}
+.row3{
+	height:300px;
+	width:100%;
+	float:left;
+	border-radius:5px;
+}
+
+.col5{
+	width:30%;
+	height:100%;
+	float:left;
+	border-radius:5px;
+}
+.col6{
+	width:40%;
+	height:100%;
+	float:left;
+	border-radius:5px;
+	background-color:#5F9EA0;
+}
+.col7{
+	width:30%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+}
+.home{
+	margin-top:20px;
+	padding:5px;
+	background-color:#5F9EA0;
+	border-radius:5px;
+}
+.home input{
+	border-radius:5px;
+}
+.availablerides{
+	height:400px;
+	margin:0 auto;
+	width:80%;
+	color:white;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	overflow:auto;
+	
+}
+table{
+	color:white;
+	border-radius:5px;
+	margin:auto 0;
+	width:80%;
+}
+th{
+	width:50%;
+	border-radius:5px;
+}
+td{
+	width:50%;
+	text-align:center;
+	border-radius:5px;
+}
+#rideDetails{
+	color:white;
+	background-color:blue;
+	border-radius:5px;
+	padding:3px;
+	border:none;
+}
+.col8{
+	width:49%;
+	height:100%;
+	float:left;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	color:white;
+	overflow:auto;
+}
+.col9{
+	width:49%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	color:white;
+	overflow:auto;
+	}
+	#list{font-weight:bold;text-align:center;}
+	
+	.row4{
+	height:500px;
+	width:100%;
+	float:left;
+	border-radius:5px;
+	overflow:auto;
+}
+.row5{
+	  border-radius:5px;
+	  width:100%;
+	   background-color:red;
+}
+.col10{
+	width:55%;
+	float:left;
+	height:70px;
+	overflow:auto;border-radius:5px;
+	background-color:#5F9EA0;color:white;
+}
+.col11{
+	width:20%;
+	float:right;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	height:70px;
+	
+}
+.col12{
+	width:20%;
+	border-radius:5px;
+	float:right;background-color:#5F9EA0;
+	height:70px;
+}
+#decline{
+	color:white;
+	background:red;;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+	margin-top:20px;
+	margin-left:40px
+}
+#accept{
+	color:white;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+	margin-top:20px;
+	margin-left:40px;
+	
+}
