@@ -165,7 +165,6 @@ span{font-weight:bold;
 }
 table{
 	color:black;
-	border-radius:5px;
 	margin:auto 0;
 	width:80%;
 	min-width:100%;
@@ -227,7 +226,6 @@ td{
 	border-radius:5px;
 	background-color:#5F9EA0;
 	height:70px;
-	
 }
 .col12{
 	border-radius:5px;
