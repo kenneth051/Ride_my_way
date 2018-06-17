@@ -11,7 +11,6 @@ body{
 background-color:white;
 
 }
-
 .container{
     margin:0 auto; 
 	width:98%;
@@ -51,11 +50,7 @@ img{
 .head h2{
 	color:white;
 }
-#registerTAG{
-	color:#purple;
-	height:10%;
-	border-radius:5px;font-weight:bold;
-}
+
 .row1{
 	height:10%;
 	width:100%;
@@ -106,7 +101,7 @@ img{
 	border-radius:5px;
 	
 	}
-	.col3 input{
+	 input{
 		border-radius:5px;
 	}
 span{font-weight:bold;
@@ -117,6 +112,17 @@ span{font-weight:bold;
 		color:#5F9EA0;
 
 }
+#links{
+	color:white;
+	background-color:lime;
+	padding:3px;
+	text-decoration:none;
+	border-radius:5px;
+	border:none;
+	margin-right:5px;
+	margin-bottom:1px;
+}
+
 #registerbutton{
 	color:white;
 	background:lime;
@@ -170,7 +176,7 @@ span{font-weight:bold;
 	border-radius:5px;
 }
 .home input{
-	border-radius:5px;
+	width:25%;
 }
 .availablerides{
 	height:400px;
@@ -191,9 +197,10 @@ table{
 	min-height:auto;
 }
 th{
-	width:50%;
+	width:30%;
 	border-radius:5px;
 }
+	
 tr{
 	background-color:#5F9EA0;
 	border-radius:5px;
@@ -214,9 +221,16 @@ td{
 	height:40%;
 	width:100%;
 	display:flex;
+	margin:auto 0;
+		background-color:#5F9EA0;
   flex-direction:row;
 	border-radius:5px;
+	text-align:center;
 }
+.pic{
+	width:200px;
+height:250px;
+	}
 .col8{
 	width:49%;
 	height:100%;
