@@ -1,0 +1,8 @@
+[
+  "tests.py::FlaskTestCase::test_create_a_ride",
+  "tests.py::FlaskTestCase::test_if_ride_page_works",
+  "tests.py::FlaskTestCase::test_request_a_ride",
+  "tests.py::FlaskTestCase::test_rides_page_loads",
+  "tests.py::FlaskTestCase::test_valid_user_login",
+  "tests.py::FlaskTestCase::test_valid_user_registration"
+]
