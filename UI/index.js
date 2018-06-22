@@ -4,6 +4,9 @@ function login(){
 function register(){
 	window.location="index.html";
 }
+function home(){
+	document.location="home.html";
+}
 function BacktoHome(){
 	window.location="home.html";
 }
@@ -21,4 +24,14 @@ function friends(){
 }
 function details(){
 	window.location="rideDetails.html";
+}
+
+function logout(){
+	window.location="index.html";
+}
+function upload(){
+	window.location="upload_picture.html";
+}
+function reminder(){
+	window.location="reminder.html";
 }

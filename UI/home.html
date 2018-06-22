@@ -14,7 +14,7 @@
 					<h2>YOUR NUMBER ONE AND EFFICIENT CARPOOLING WEBSITE</h2>
 			   </div> 
 		         <div class="row1">
-			   <div class="col1"><center><button id="loginbutton"onclick="requests()">REQUESTS(0)</button>|  |<button id="loginbutton">LOGOUT</button></center></div>
+			   <div class="col1"><center><a href="home.html" id="links">HOME</a> <button id="links" onclick="profile()">PROFILE</button> <a href="friends.html"id="links">FRIENDS</a> <button id="links"onclick="requests()">REQUESTS(0)</button> <button id="links"onclick="reminder()">REMINDERS(0)</button><button id="links"onclick="logout()">LOGOUT</button></center></div>
 			   <div class="col2"><h2>LOGGED IN AS: </h2></div>
 		   </div></br></br>
 		   <h3>HOME PAGE</h3>
@@ -23,11 +23,13 @@
 		   <form>
 		  <span> FROM</span><br> <input type="text" placeholder="Departure"><br>
 		   <span>TO </span><br> <input type="text"placeholder="Arrival"><br>
-		  <span> DATE </span><br><input type="text"placeholder="Day" size="3"> <input type="text"placeholder="Month" size="3">
-		    <input type="text"placeholder="	Year" size="5"><br>
+		  <span> DATE </span><br><input type="text"placeholder="Day" size="3"><br>
+		  <span>MONTH</span><br><input type="text"placeholder="Month" size="3"><br>
+		    <span>YEAR</span><br><input type="text"placeholder="Year" size="5"><br>
 			<span>DEPARTURE TIME</span><br><input type="text"placeholder="Enter Time E.G 20:00" size="15"><br>     
 			<span>SEATS AVAILABLE </span><br><input type="text"placeholder="SEATS AVAILABLE" size="20"><br>
-			<span>PHONE NUMBER</span><br> <input type="text" placeholder="Phone Number"><br><br>
+			<span>PHONE NUMBER</span><br> <input type="text" placeholder="Phone Number"><br>
+			<span>SET PRICE</span><br> <input type="text" placeholder="Transport Price"><br><br>
 			<p>VALIDATION MESSAGE HERE</p>
 			<button id="loginbutton">SUBMIT</button>
 		   </form>
@@ -35,8 +37,7 @@
 		   <div class="home">
 		   <h3> A YOU A PASSENGER? SEE ALL AVAILABLE RIDES</h3>
 		   <button id="loginbutton"onclick="availableRides()"> CLICK TO VIEW AVAILABLE RIDES</div>
-			  .<div class="bot">
-			  <button id="registerbutton"onclick="profile()";><b>VIEW PROFILE<b></button> |         | <button id="registerbutton"onclick="friends()";><b>FRIENDS<b></button> 
+			  .<div class="bot"> 
 			  </div>
 		  </div></br>
         </body>    
