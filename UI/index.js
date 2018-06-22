@@ -29,3 +29,9 @@ function details(){
 function logout(){
 	window.location="index.html";
 }
+function upload(){
+	window.location="upload_picture.html";
+}
+function reminder(){
+	window.location="reminder.html";
+}
