@@ -2,7 +2,7 @@ language: python
 python:
   - 3.5
   - 3.6
-  - "36" 
+  - "36" st
  
 
 # command to install dependencies
