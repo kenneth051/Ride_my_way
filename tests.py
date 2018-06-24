@@ -49,5 +49,12 @@ class FlaskTestCase(unittest.TestCase):
         info = dict(username="john", password="johnsmith")
         response = tester.post('/v1/login', data=json.dumps(info), content_type="application/json")
         self.assertEqual(response.status_code, 200)
+#test to get all rides api
+    def test_users_api(self):
+        """test to get all users api"""
+        tester = APP.test_client(self)
+        response = tester.get('http://localhost:5000/v1/users', content_type="application/json")
+        self.assertEqual(response.status_code, 200)
+
 if __name__ == '__main__':
     unittest.main()
