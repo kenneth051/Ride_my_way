@@ -25,7 +25,7 @@ class RegisterUser(Resource):
                 return jsonify({"Error":"You are already registered"})
         users.append(data)
         data = "User has been registered"
-        return jsonify({'result':users, "success":data})
+        return jsonify({'result':register, "success":data})
 class LoginUser(Resource):
     """class where a user logs in"""
     @classmethod
@@ -50,15 +50,18 @@ class CreateARide(Resource):
         data['To'] = created_ride['To']
         data['Time'] = created_ride['Time']
         data['Date'] = created_ride['Date']
-        data['Driver'] = created_ride['Driver']
+        data['Driver_Username'] = created_ride['Driver_Username']
         data['Cost'] = created_ride['Cost']
         data['rideID'] = created_ride['rideID']
         for ride_info in rides:
             if (ride_info['From'] == created_ride['From'] and
                     ride_info['To'] == created_ride['To']and
                     ride_info['Date'] == created_ride['Date']and
-                    ride_info['Driver'] == created_ride['Driver']):
+                    ride_info['Driver_Username'] == created_ride['Driver_Username']):
                 return jsonify({"Error":"You already created the ride"})
+        for user_data in users:
+            if created_ride["Driver_Username"] != user_data["username"]:
+                return jsonify({"Error":"you are not a user,create an acount"})
         rides.append(data)
         data = "Ride has been created"
         return jsonify({'result':rides, "success":data})
@@ -66,7 +69,7 @@ class GETAllRides(Resource):
     """class for getting all available rides"""
     @classmethod
     def get(cls):
-        """ a method view all ride offers """
+        """ a method to view all ride offers """
         return rides
 class GETRide(Resource):
     """class for getting a specific ride"""
@@ -93,6 +96,12 @@ class RequestRide(Resource):
                           ride_info['From'], "to", ride_info['To'], "at",
                           ride_info['Time'], "on", ride_info["Date"])
         return jsonify({"result":result})
+class GETAllUsers(Resource):
+    """class for getting all available rides"""
+    @classmethod
+    def get(cls):
+        """ a method view all ride offers """
+        return users
 
 API.add_resource(GETAllRides, "/v1/rides")
 API.add_resource(GETRide, "/v1/ride/<int:ride_id>")
@@ -100,6 +109,6 @@ API.add_resource(CreateARide, '/v1/create_ride')
 API.add_resource(RequestRide, '/v1/ride/<int:_id>/request')
 API.add_resource(RegisterUser, "/v1/register")
 API.add_resource(LoginUser, "/v1/login")
-
+API.add_resource(GETAllUsers, "/v1/users")
 if __name__ == '__main__':
     APP.run(debug=True)

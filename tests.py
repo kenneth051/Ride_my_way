@@ -21,7 +21,7 @@ class FlaskTestCase(unittest.TestCase):
         """test to create a ride"""
         tester = APP.test_client(self)
         info = dict(From="mukono", To="kampala", Time="4:00pm", Date="4/4/2018",
-                    Driver="john", Cost="4000", rideID=4)
+                    Driver_Username="john", Cost="4000", rideID=4)
         response = tester.post('/v1/create_ride', data=json.dumps(info),
                                content_type="application/json")
         self.assertEqual(response.status_code, 200)
@@ -49,5 +49,12 @@ class FlaskTestCase(unittest.TestCase):
         info = dict(username="john", password="johnsmith")
         response = tester.post('/v1/login', data=json.dumps(info), content_type="application/json")
         self.assertEqual(response.status_code, 200)
+#test to get all rides api
+    def test_users_api(self):
+        """test to get all users api"""
+        tester = APP.test_client(self)
+        response = tester.get('http://localhost:5000/v1/users', content_type="application/json")
+        self.assertEqual(response.status_code, 200)
+
 if __name__ == '__main__':
     unittest.main()

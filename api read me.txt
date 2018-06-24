@@ -25,17 +25,17 @@ CREATING A RIDE API DATA IN POSTMAN
 
 {
         "From": "uganda",
- 
+
          "To": "kenya",
-        
+ 
          "Time": "10:45",
-       
+
          "Date": "3/5/2",
-       
-         "Driver": "john potter",
-      
+
+         "Driver_Username": "joy",
+
          "Cost": "4600",
-      
+
          "rideID": 5
   
-  }
+     }
