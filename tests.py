@@ -21,7 +21,7 @@ class FlaskTestCase(unittest.TestCase):
         """test to create a ride"""
         tester = APP.test_client(self)
         info = dict(From="mukono", To="kampala", Time="4:00pm", Date="4/4/2018",
-                    Driver="john", Cost="4000", rideID=4)
+                    Driver_Username="john", Cost="4000", rideID=4)
         response = tester.post('/v1/create_ride', data=json.dumps(info),
                                content_type="application/json")
         self.assertEqual(response.status_code, 200)
