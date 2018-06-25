@@ -4,7 +4,7 @@ i have used html, css and  a alittle javascript to just navigate from one page t
 included (app.py) are APIs built to over see the functionality of the website but are not yet fully done and intergrated to the UI
 
 
-
+https://travis-ci.org/kenneth051/Ride_my_way.svg?branch=master
 
 
 <a href='https://coveralls.io/github/kenneth051/Ride_my_way?branch=master'><img src='https://coveralls.io/repos/github/kenneth051/Ride_my_way/badge.svg?branch=master' alt='Coverage Status' /></a>
