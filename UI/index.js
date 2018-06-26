@@ -16,6 +16,9 @@ function availableRides(){
 function profile(){
 	window.location="profile.html";
 }
+function edit_profile(){
+	window.location="Edit profile.html";
+}
 function requests(){
 	window.location="requests.html";
 }

@@ -81,22 +81,22 @@ img{
 	display:flex;
   flex-direction:row;
 	border-radius:5px;
-	background-image:url("images/celeb.jpg");
+	background-image:url("../images/celeb.jpg");
 	background-size:cover;
 }
 
 .col4{
-	width:40%;
+	width:45%;
 	height:100%;
 	border-radius:5px;
 }
 .colx{
-	width:5%;
+	width:10%;
 	height:100%;
 	border-radius:5px;
 }
 .col3{
-	width:55%;
+	width:45%;
 	height:100%;
 	border-radius:5px;
 	
@@ -172,17 +172,26 @@ span{font-weight:bold;
 .home{
 	margin-top:20px;
 	padding:5px;
-	background-color:#5F9EA0;
+	height:40%;
+background-color:#5F9EA0;
+	width:100%;
+	display:flex;
+  flex-direction:row;
 	border-radius:5px;
 }
 .home input{
-	width:25%;
+	width:70%;
+}
+.profile{
+	margin-top:20px;
+	padding:5px;
+	background-color:#5F9EA0;
+	border-radius:5px;
 }
 .availablerides{
 	height:400px;
 	margin:0 auto;
 	width:80%;
-	color:white;
 	border-radius:5px;
 	background-color:#5F9EA0;
 	overflow:auto;
