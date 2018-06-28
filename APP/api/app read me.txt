@@ -1,5 +1,5 @@
 a version one design of the api to the UI design of our RIDE_MY_APP. this api design deals with sampling of how
-the app would work only that here we are using json data
+the app would work only that here we are using json data.there is no use of persistent data
 
 
 
@@ -17,4 +17,9 @@ CREATING A RIDE API DATA IN POSTMAN
    "cost":"8000",
 
    "Id":3
-  }   
+  }
+
+
+REQUESTING FOR A RIDE
+http://127.0.0.1:5000/v1/ride/1/request
+{"Id":1}
