@@ -11,23 +11,27 @@ class Create_A_Ride(Resource):
     def post(cls):
         """ a user can create a ride here """
         data = request.get_json()
-        ride=Rides(int(data['Id']),data['From'],data['to'],data['time'],data['date'])
-        info=ride.Create_Ride()
-        return jsonify({'result':info})
+        ride=Rides(int(data["Id"]),data["From"],data["to"],
+                    data["time"],data["date"],data["cost"])
+        info=ride.creating_ride()
+        response = jsonify(info)
+        response.status_code = 201
+        return response
+
 
 class Get_All_Rides(Resource):
     """class for getting all available rides"""
     @classmethod
     def get(cls):
         """ a method to view all ride offers """
-        result=Rides.DisplayRides()
+        result=Rides.display_rides()
         return result
 class Get_A_Ride(Resource):
     """class for getting a specific ride"""
     @classmethod
     def get(cls, ride_id):
         """ a user can view info  for a specific ride here """
-        result=Rides.GetOne_Ride(ride_id)    
+        result=Rides.getone_ride(ride_id)    
         return jsonify({"result":result})
 class Request_A_Ride(Resource):
     """class for requesting a ride"""
@@ -36,7 +40,7 @@ class Request_A_Ride(Resource):
         """ a user can request for a specific ride here """
         result = "Invalid id"
         data = request.get_json()
-        result=Rides.Request_Ride(data['Id'])
+        result=Rides.request_ride(data['Id'])
         return jsonify({"result":result})
         
 @APP.errorhandler(404)

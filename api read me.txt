@@ -5,15 +5,16 @@ the app would work only that here we are using json data
 
 CREATING A RIDE API DATA IN POSTMAN
 
-{
-        "From": "uganda",
+ {
+ "From":"mbuya",
 
-         "to": "kenya",
+   "to":"entebbe",
+
+   "date":"4/7/2018",
  
-         "time": "10:45",
+   "time":"5pm",
+ 
+   "cost":"8000",
 
-         "date": "3/5/2",
-
-         "Id": 5
-  
-     }
+   "Id":3
+  }   
