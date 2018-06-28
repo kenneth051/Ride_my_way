@@ -5,9 +5,8 @@ included (app.py) are APIs built to over see the functionality of the website bu
 
 
 
-
-
 <a href='https://coveralls.io/github/kenneth051/Ride_my_way?branch=master'><img src='https://coveralls.io/repos/github/kenneth051/Ride_my_way/badge.svg?branch=master' alt='Coverage Status' /></a>
 
 <a href="https://codeclimate.com/github/kenneth051/Ride_my_way/maintainability"><img src="https://api.codeclimate.com/v1/badges/5121dd921a17292f244d/maintainability" /></a>
 
+[![Build Status](https://travis-ci.org/kenneth051/Ride_my_way.svg?branch=dev)](https://travis-ci.org/kenneth051/Ride_my_way)
