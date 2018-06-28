@@ -1,7 +1,7 @@
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from api.Validation import Validate
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
+from app.api.Validation import Validate
 
 
 class Rides():

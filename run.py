@@ -5,7 +5,7 @@ import subprocess, sys, os
 script_path = os.path.dirname(__file__)
 src = os.path.join(script_path, '/APP/')
 sys.path.append(src)
-from api.app import Get_A_Ride, Get_All_Rides, Create_A_Ride, Request_A_Ride
+from app.api.app import Get_A_Ride, Get_All_Rides, Create_A_Ride, Request_A_Ride
 APP = Flask(__name__)
 API = Api(APP)
 

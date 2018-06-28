@@ -3,12 +3,12 @@ import unittest
 import json
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 from run import APP
 
 
 class FlaskTestCase(unittest.TestCase):
-    """class to test our api"""
+    """class to test our api routes"""
 
     def setUp(self):
         self.app = APP
