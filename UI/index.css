@@ -1,0 +1,297 @@
+html{
+	background-color:#D3D3D3;
+	padding-top:3px;
+	padding-bottom:15px;
+	
+}
+body{
+	margin:0 auto; 
+	width:97%;
+	border-radius:5px;
+background-color:white;
+
+}
+.container{
+    margin:0 auto; 
+	width:98%;
+	padding-top:3px;
+background-color:white;
+
+}
+.foo1{
+	background-color:#D3D3D3;
+	width:100%;
+	height:100%;
+	margin-top:2px;
+}
+.foo{
+	margin:0 auto;
+	width:98%;
+	height:100%;padding-top:2px;
+	background-color:white;
+	border-radius:5px;
+}
+
+h1{
+	font-family:impact;
+}
+h2{
+	color:#5F9EA0;
+}
+img{
+	border-radius:5px;
+}
+.head{
+	color:white;
+	text-align:center;
+	background-color:#5F9EA0;
+	border-radius:5px;
+}
+.head h2{
+	color:white;
+}
+
+.row1{
+	height:10%;
+	width:100%;
+	float:left;
+	border-radius:5px;
+}
+.col2{
+	width:50%;
+	height:100%;
+	float:left;
+}
+.col1{
+	width:45%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+	
+	}
+#loginbutton{
+	color:white;font-weight:bold;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:20px;padding:3px;
+}	
+.row2{
+	height:40%;
+	width:100%;
+	display:flex;
+  flex-direction:row;
+	border-radius:5px;
+	background-image:url("../images/celeb.jpg");
+	background-size:cover;
+}
+
+.col4{
+	width:45%;
+	height:100%;
+	border-radius:5px;
+}
+.colx{
+	width:10%;
+	height:100%;
+	border-radius:5px;
+}
+.col3{
+	width:45%;
+	height:100%;
+	border-radius:5px;
+	
+	}
+	 input{
+		border-radius:5px;
+	}
+span{font-weight:bold;
+	color:white;
+	font-size:20px;
+}
+#register{
+		color:#5F9EA0;
+
+}
+#links{
+	color:white;
+	background-color:lime;
+	padding:3px;
+	text-decoration:none;
+	border-radius:5px;
+	border:none;
+	margin-right:5px;
+	margin-bottom:1px;
+}
+
+#registerbutton{
+	color:white;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+}
+.loginform{
+	padding-top:60px;
+}
+.row2 input{
+	width:80%;
+}
+.loginform input{
+	border-radius:5px;
+	width:80%;
+}
+.bot{
+	background-color:#5F9EA0;
+	height:50px;
+	width:100%;
+	border-radius:5px;
+}
+.row3{
+	height:300px;
+	width:100%;
+	display:flex;
+    justify-content: center;
+	border-radius:5px;
+}
+
+.col5{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+}
+.col6{
+	width:40%;
+	height:100%;
+	border-radius:5px;
+	background-color:#5F9EA0;
+}
+.col7{
+	width:30%;
+	height:100%;
+	border-radius:5px;
+}
+.home{
+	margin-top:20px;
+	padding:5px;
+	height:40%;
+background-color:#5F9EA0;
+	width:100%;
+	display:flex;
+  flex-direction:row;
+	border-radius:5px;
+}
+.home input{
+	width:70%;
+}
+.profile{
+	margin-top:20px;
+	padding:5px;
+	background-color:#5F9EA0;
+	border-radius:5px;
+}
+.availablerides{
+	height:400px;
+	margin:0 auto;
+	width:80%;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	overflow:auto;
+	
+}
+table{
+	color:black;
+	border-radius:5px;
+	margin:auto 0;
+	width:80%;
+	min-width:100%;
+	min-height:auto;
+}
+th{
+	width:30%;
+	border-radius:5px;
+}
+	
+tr{
+	background-color:#5F9EA0;
+	border-radius:5px;
+	color:white;
+}
+td{
+	text-align:center;
+	border-radius:5px;
+}
+#rideDetails{
+	color:white;
+	background-color:blue;
+	border-radius:5px;
+	padding:3px;
+	border:none;
+}
+.friendsrow{
+	height:40%;
+	width:100%;
+	display:flex;
+	margin:auto 0;
+		background-color:#5F9EA0;
+  flex-direction:row;
+	border-radius:5px;
+	text-align:center;
+}
+.pic{
+	width:200px;
+height:250px;
+	}
+.col8{
+	width:49%;
+	height:100%;
+	float:left;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	color:white;
+	overflow:auto;
+}
+.col9{
+	width:49%;
+	height:100%;
+	float:right;
+	border-radius:5px;
+	background-color:#5F9EA0;
+	color:white;
+	overflow:auto;
+	}
+	#list{font-weight:bold;text-align:center;}
+	
+	.row4{
+	height:auto;
+	width:100%;
+	border-radius:5px;
+}
+
+.col10{
+	width:55%;
+	height:70px;
+	overflow:auto;border-radius:5px;
+	background-color:#5F9EA0;color:white;
+}
+.col11{
+	border-radius:5px;
+	background-color:#5F9EA0;
+	height:70px;
+	
+}
+.col12{
+	border-radius:5px;
+    background-color:#5F9EA0;
+	height:70px;
+}
+#decline{
+	color:white;
+	background:red;;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+}
+#accept{
+	color:white;
+	background:lime;
+	border-radius:5px;border:none;
+	font-size:15px;padding:5px;
+}
