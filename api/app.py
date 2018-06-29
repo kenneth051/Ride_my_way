@@ -3,8 +3,8 @@ from flask import request, jsonify
 from flask_restful import Resource
 import os
 import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-from app.api.ride import Rides
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
+from api.ride import Rides
 
 
 class Create_A_Ride(Resource):

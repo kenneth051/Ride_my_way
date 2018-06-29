@@ -3,7 +3,7 @@ from flask import Flask
 from flask_restful import Api
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
-from app.api.app import Get_A_Ride, Get_All_Rides, Create_A_Ride, Request_A_Ride
+from api.app import Get_A_Ride, Get_All_Rides, Create_A_Ride, Request_A_Ride
 APP = Flask(__name__)
 API = Api(APP)
 
