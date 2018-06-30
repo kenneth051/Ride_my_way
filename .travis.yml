@@ -12,5 +12,3 @@ script: nosetests --with-coverage --cover-package test
 after_success: coveralls
 
 
-
-
