@@ -1,7 +1,5 @@
-import os
-import sys
-sys.path.append(os.path.dirname(__file__))
-from api.ride import rides
+
+from ride import rides
 
 
 class requestClass():
