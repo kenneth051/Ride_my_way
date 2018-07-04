@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_jwt_extended import (JWTManager)
 from flask_restful import Api
-from api import getRide,getAllRides,createARide,requestARide,loginUser,createUser,getAllUsers 
+from api import getRide,getAllRides,createARide,requestARide,loginUser,createUser,getAllUsers,OneUser 
 APP = Flask(__name__)
 
 API = Api(APP)
@@ -20,3 +20,4 @@ API.add_resource(requestARide, '/API/v1/ride/<int:_id>/request')
 API.add_resource(createUser, "/API/v1/register")
 API.add_resource(getAllUsers, "/API/v1/users")
 API.add_resource(loginUser, "/API/v1/login")
+API.add_resource(OneUser, "/API/v1/user/<int:_id>")
