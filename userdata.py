@@ -1,18 +1,10 @@
 import psycopg2
+from database import Database
 from flask_jwt_extended import (create_access_token,jwt_required,get_jwt_identity)
-class Database:  
-    '''con = psycopg2.connect( host ="localhost",user = "postgres",
-        password = "chaos",dbname = "Ride_my_way") '''
+class UserData(Database):  
     
     def __init__(self):
-        self.con = psycopg2.connect( host ="localhost",user = "postgres",password = "chaos",dbname = "Ride_my_way")  
-        if self.con:
-            print("database connected to")
-        else:
-            print("cannot connect to database")    
-        
-    def closedb(self):
-        self.con.close()
+         Database.__init__(self)
      
     def createTable(self):
         try: 
@@ -37,7 +29,6 @@ class Database:
                 (%s,%s,%s,%s,%s,%s,%s,%s)",(firstname1,lastname1,username1,password1,gender1,contact1,country1,city1))      
                 self.con.commit()
                 return"you have successfuly registered"
-                #Database.closedb()
         except:
             return "user cannot be registered, contact ADMIN"                
                         
@@ -58,7 +49,6 @@ class Database:
             data["country"]=row[7]
             data["city"]=row[8]
             lst.append(data)
-        #data=result.__dict__
         return lst
 
     def SingleUser(self,_id):
@@ -80,7 +70,6 @@ class Database:
                 data["country"]=row[7]
                 data["city"]=row[8]
                 lst.append(data)
-            #data=result.__dict__
             return lst
         else:
             return "invalid user ID use a valid one"    
@@ -89,7 +78,7 @@ class Database:
     def login(self,username1,password1):
         try:
             cur=self.con.cursor()
-            cur.execute("SELECT user_id FROM  Users where username = %s AND password = %s",(username1,password1))      
+            cur.execute("SELECT id FROM  Users where username = %s AND password = %s",(username1,password1))      
             self.con.commit()
             count=cur.rowcount
             result=cur.fetchone()
@@ -97,18 +86,6 @@ class Database:
                 access_token = create_access_token(identity=result)
                 return access_token 
             else:
-                return "invalid username or password"  
-            #Database.closedb()
-            
+                return "invalid username or password"      
         except:
-            return "login failure contact ADMIN"        
-                    
-d=Database()
-#d.login("kenneth051","kenneth")
-
-#d.createTable()
-#d.insertIntoUsers("joy","williams","joy2","12345","female","99999","usa","carlifornia")
-#d.fetchUsers()
-#d.singleUsers(31)
-#self,firstname1,lastname1,username1,password1,gender1,contact1,country1,city1
-#"joy","williams","joy4","12345","female","99999","usa","carlifornia"
+            return "login failure contact ADMIN"

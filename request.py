@@ -1,10 +1,8 @@
-
 from ride import rides
 from database import Database
 
 
 class RequestClass(Database):
-    requested_rides=[]
     def __init__(self):
         Database.__init__(self)
  
@@ -20,6 +18,8 @@ class RequestClass(Database):
             print("table request already created or error creating it")    
 
     def createRequest(self,ride_id1,passenger_id1,driver_id1):
+        req=RequestClass()
+        req.createTable()
         try:
             cur=self.con.cursor()                   
             cur.execute("SELECT * FROM Requests where ride_id = %s and passenger_id = %s and driver_id = %s",(ride_id1,passenger_id1,driver_id1))
@@ -33,9 +33,31 @@ class RequestClass(Database):
                 self.con.commit()
                 print("Request has been created successfully")
         except:
-            return "Request cannot be created, contact ADMIN Error 500"              
-                        
-    '''def fetch_rides(self):
+            return "Request cannot be created, contact ADMIN Error 500"
+            
+    def getDriver(self,driver):
+        cur=self.con.cursor()                   
+        cur.execute("SELECT driver_id FROM Rides where id = %s ",(driver,))
+        result=cur.rowcount
+        if result==1:
+            data=cur.fetchone()
+            return data
+    def createRequests(self,ride_id1,passenger_id1,driver_id1):
+        try:
+            cur=self.con.cursor()
+            cur.execute("SELECT * FROM Requests where ride_id = %s and passenger_id = %s and driver_id = %s ",(ride_id1,passenger_id1,driver_id1))
+            self.con.commit()
+            result=cur.rowcount
+            if result>0:
+                return "Request has been created previously! no duplicate allowed"
+            else:   
+                cur.execute("INSERT INTO Requests(ride_id,passenger_id,driver_id)VALUES\
+                (%s,%s,%s)",(ride_id1,passenger_id1,driver_id1))      
+                self.con.commit()
+                return"Request has been created successfully"
+        except:
+            return "Request cannot be created, Check your ride id"             
+    '''def fetch_requests(self):
         cur=self.con.cursor()
         cur.execute("SELECT * FROM  Requests",);
         affected=cur.rowcount
@@ -74,11 +96,8 @@ class RequestClass(Database):
                 data["cost"]=row[5]
                 data["driver_id"]=row[6]
                 lst.append(data)
-            #data=result.__dict__
             return lst
         else:
             return "invalid ride Id " 
 
 req=RequestClass()
-#req.createTable()
-req.createRequest("5","6","7")

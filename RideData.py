@@ -18,8 +18,10 @@ class RidesConnection(Database):
             print("table already created or error creating it")    
 
     def createRide(self,ride_from1,ride_to1,ride_date1,ride_time1,cost1,driver_id1):
+        d=RidesConnection()
+        d.createTable()
         try:
-            cur=self.con.cursor()                   
+            cur=self.con.cursor()               
             cur.execute("SELECT * FROM Rides where ride_from = %s and ride_to = %s and ride_date = %s and driver_id = %s",(ride_from1,ride_to1,ride_date1,driver_id1))
             self.con.commit()
             result=cur.rowcount
@@ -75,14 +77,7 @@ class RidesConnection(Database):
         else:
             return "invalid ride Id "    
         
+                             
+       
 
-   
-#d=RidesConnection()
-#d.login("kenneth051","kenneth")
-
-#d.createTable()
-#d.createRide("jinja","kampala","2/4/2012","12:42am","2000","13")
-#d.fetch_rides()
-#d.singleUsers(31)
-#self,firstname1,lastname1,username1,password1,gender1,contact1,country1,city1
-#"joy","williams","joy4","12345","female","99999","usa","carlifornia"
+    

@@ -11,7 +11,7 @@ jwt = JWTManager(APP)
 
 @APP.errorhandler(404)
 def page_not_found(e):
-    return "use a valid URL", 404
+    return "Please use a valid URL", 404
 
 API.add_resource(getAllRides, "/API/v1/rides")
 API.add_resource(getRide, "/API/v1/ride/<int:ride_id>")

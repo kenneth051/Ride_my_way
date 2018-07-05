@@ -9,16 +9,4 @@ class Database:
                 print("cannot connect to database")    
             
     def closedb(self):
-            self.con.close()
-    def droptable(self):
-              
-        try:
-            cur=self.con.cursor()                   
-            cur.execute("DROP TABLE Rides, Requests, Rides")
-            self.con.commit()
-            print("table has been deleted")
-        except:
-            print("rides table cannot be deleted")    
-
-en=Database()
-en.droptable()            
+            self.con.close()           
