@@ -1,9 +1,18 @@
 # Ride_my_way
 repository for carpooling website
-<<<<<<< HEAD
-i have used html, css and  a alittle javascript to just navigate from one page to another, i have also provided dummy data to just show how the application will work when a database is added to it.
-included (app.py) are APIs built to over see the functionality of the website but are not yet fully done and intergrated to the UI
+repository for carpooling website this is a repository about a carpooling website.i have upload the GUIs, API endpoints for challenge 2 and 3. the feature of this website include
 
+Signing up/ registeration
+
+logging in
+
+users get to create rides
+
+users get to join rides
+
+users get to reject of approve rides
+
+i have so far used html, css and python as well as javascript. python is on the backend while javascript and html are on the front end the dependencies are in the requirements files, the run filestarts the application. i have used python 3.6 while developing the APIs strictly OOP
 
 [![Coverage Status](https://coveralls.io/repos/github/kenneth051/Ride_my_way/badge.svg)](https://coveralls.io/github/kenneth051/Ride_my_way)
 
@@ -11,6 +20,3 @@ included (app.py) are APIs built to over see the functionality of the website bu
 
 [![Build Status](https://travis-ci.org/kenneth051/Ride_my_way.svg?branch=dev)](https://travis-ci.org/kenneth051/Ride_my_way)
 =======
-this is code am working on for challenge 3. i have finished with the databases and now going to implement request APIs as well as the coverage badges.i will write tests
-the do the endpoints from there will structure the files and the pull them in a more suitable branch
->>>>>>> a18a0dd52d991badd7371e9fb1a76876844f1c2d
