@@ -1,12 +1,13 @@
 import psycopg2
-from database import Database
+from app.models.database import Database
 from flask_jwt_extended import (create_access_token,jwt_required,get_jwt_identity)
+
 class UserData(Database):  
     
     def __init__(self):
          Database.__init__(self)
      
-    def createTable(self):
+    def create_table(self):
         try: 
             cur=self.con.cursor()
             cur.execute("""create table Users (user_id serial primary key not null,firstname text not null,
@@ -16,7 +17,7 @@ class UserData(Database):
             self.con.close()
         except:
             print("table already created or error creating it")    
-    def insertIntoUsers(self,firstname1,lastname1,username1,password1,gender1,contact1,country1,city1):
+    def insert_into_users(self,firstname1,lastname1,username1,password1,gender1,contact1,country1,city1):
         try:
             cur=self.con.cursor()                   
             cur.execute("SELECT username FROM Users where username = %s ",(username1,))
@@ -32,7 +33,7 @@ class UserData(Database):
         except:
             return "user cannot be registered, contact ADMIN"                
                         
-    def fetchUsers(self):
+    def fetch_users(self):
         cur=self.con.cursor()
         cur.execute("SELECT * FROM Users",);
         result=cur.fetchall()
@@ -51,29 +52,7 @@ class UserData(Database):
             lst.append(data)
         return lst
 
-    def SingleUser(self,_id):
-        cur=self.con.cursor()
-        cur.execute("SELECT * FROM Users where user_id = %s ",(_id,));
-        affected=cur.rowcount
-        result=cur.fetchall()
-        if affected >0: 
-            data={}
-            lst=[]
-            for row in result:
-                data["user_id"]= row[0]
-                data["firstname"]=row[1]
-                data["lastname"]=row[2]
-                data["username"]=row[3]
-                data["password"]=row[4]
-                data["gender"]=row[5]
-                data["contact"]=row[6]
-                data["country"]=row[7]
-                data["city"]=row[8]
-                lst.append(data)
-            return lst
-        else:
-            return "invalid user ID use a valid one"    
-        
+    
 
     def login(self,username1,password1):
         try:

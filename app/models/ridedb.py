@@ -1,11 +1,11 @@
 import psycopg2
-from database import Database
+from app.models.database import Database
 class RidesConnection(Database):  
    
     def __init__(self):
          Database.__init__(self)
 
-    def createTable(self):
+    def create_table(self):
         try: 
             cur=self.con.cursor()
             cur.execute("""create table Rides (id serial primary key not null,ride_from text not null,
@@ -17,9 +17,9 @@ class RidesConnection(Database):
         except:
             print("table already created or error creating it")    
 
-    def createRide(self,ride_from1,ride_to1,ride_date1,ride_time1,cost1,driver_id1):
+    def create_ride(self,ride_from1,ride_to1,ride_date1,ride_time1,cost1,driver_id1):
         d=RidesConnection()
-        d.createTable()
+        d.create_table()
         try:
             cur=self.con.cursor()               
             cur.execute("SELECT * FROM Rides where ride_from = %s and ride_to = %s and ride_date = %s and driver_id = %s",(ride_from1,ride_to1,ride_date1,driver_id1))
