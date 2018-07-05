@@ -4,10 +4,15 @@ this is a repository about a carpooling website.i have upload the GUIs, API endp
 the feature of this website include
 
 Signing up/ registeration
+
 logging in
+
 users get to create rides
+
 users get to join rides
+
 users get to reject of approve rides
+
 
 i have so far used html, css and python as well as javascript. python is on the backend while javascript and html are on the front end
  the dependencies are in the requirements files, the run filestarts the application.
