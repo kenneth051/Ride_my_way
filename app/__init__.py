@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 from flask import Flask, current_app,jsonify
 from flask_jwt_extended import (JWTManager)
 from flask_restful import Api
