@@ -26,7 +26,7 @@ i have so far used html, css and python as well as javascript. python is on the 
  
  /API/v1/users/rides
  
- /API/rides/<rideId>/requests
+ /API/rides/4/requests
  
  /API/v1/auth/signup
  
@@ -34,9 +34,8 @@ i have so far used html, css and python as well as javascript. python is on the 
  
  /API/v1/auth/login
  
- /API/v1/users/rides/<rideId>/requests
  
- /users/rides/<rideId>/requests/6
+ /users/rides/4/requests/6
  
  RUNNING THE APP
  
