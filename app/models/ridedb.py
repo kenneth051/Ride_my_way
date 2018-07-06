@@ -1,5 +1,9 @@
 import psycopg2
+<<<<<<< HEAD
 from database import Database
+=======
+from app.models.database import Database
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
 class RidesConnection(Database):  
    
     def __init__(self):
@@ -54,9 +58,13 @@ class RidesConnection(Database):
                 lst.append(data)
             return lst
         else:
+<<<<<<< HEAD
             response = jsonify({"message":"No rides created yet"})
             response.status_code = 200
             return response  
+=======
+            return "No rides created yet"
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
 
     def single_ride(self,_id):
         cur=self.con.cursor()
@@ -77,10 +85,14 @@ class RidesConnection(Database):
                 lst.append(data)
             return lst
         else:
+<<<<<<< HEAD
             return "invalid ID"
             response = jsonify({"message":"invalid ID"})
             response.status_code = 200
             return response    
+=======
+            return "invalid ride Id "    
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
         
                              
        

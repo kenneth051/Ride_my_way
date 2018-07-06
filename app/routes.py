@@ -1,4 +1,5 @@
 """Initializing API files"""
+<<<<<<< HEAD
 from flask_restful import Api
 class Routes():
     """class defining routes"""
@@ -16,3 +17,23 @@ class Routes():
         api.add_resource(LoginUser, "/API/v1/auth/login")
         api.add_resource(AllRequests, "/API/v1/users/rides/<rideId>/requests")
         api.add_resource(Respond, "/users/rides/<rideId>/requests/<requestId>")
+=======
+class Routes():
+        
+    def initialize(self,APP):
+            
+        from flask_restful import Api
+        from app.api.api import getRide, getAllRides, createARide, requestARide, loginUser, createUser, getAllUsers, AllRequests, Respond
+
+        API = Api(APP)
+
+        API.add_resource(getAllRides, "/API/v1/rides")
+        API.add_resource(getRide, "/API/v1/ride/<int:rideId>")
+        API.add_resource(createARide, '/API/v1/users/rides')
+        API.add_resource(requestARide, '/API/rides/<rideId>/requests')
+        API.add_resource(createUser, "/API/v1/auth/signup")
+        API.add_resource(getAllUsers, "/API/v1/users")
+        API.add_resource(loginUser, "/API/v1/auth/login")
+        API.add_resource(AllRequests, "/API/v1/users/rides/<rideId>/requests")
+        API.add_resource(Respond,"/users/rides/<rideId>/requests/<requestId>")
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d

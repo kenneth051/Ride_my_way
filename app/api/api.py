@@ -1,5 +1,6 @@
 """API class"""
 from flask import request, jsonify
+<<<<<<< HEAD
 from flask_restful import Resource
 from flask_jwt_extended import (jwt_required, get_jwt_identity)
 from validation import ValidateUsers
@@ -37,10 +38,40 @@ class GetAllRides(Resource):
     """class for getting all available rides"""
     @classmethod
     @jwt_required
+=======
+from flask_restful import Api,Resource
+from flask_jwt_extended import (create_access_token,jwt_required,get_jwt_identity)
+
+from app.models.ridedb import RidesConnection
+from app.models.request import RequestClass
+from app.models.userdata import UserData
+
+
+
+
+class createARide(Resource):
+    """class where a user creates a ride"""
+    @classmethod
+    def post(cls):
+        data = request.get_json()
+        driver = get_jwt_identity()
+        obj = RidesConnection()
+        result=obj.create_ride(data["ride_from"], data["ride_to"],
+                     data["ride_date"], data["ride_time"], data["cost"], data["driver_id"])
+        response = jsonify(result)
+        response.status_code = 201
+        return response
+
+
+class getAllRides(Resource):
+    """class for getting all available rides"""
+    @classmethod
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
     def get(cls):
         obj = RidesConnection()
         result = obj.fetch_rides()
         return result
+<<<<<<< HEAD
         return jsonify({"result": result})
 
 
@@ -71,10 +102,38 @@ class RequestARide(Resource):
         return jsonify({"created request":request_object})
 
 class CreateUser(Resource):
+=======
+
+
+class getRide(Resource):
+    """class for getting a specific ride"""
+    @classmethod
+    def get(cls, rideId):
+        obj = RidesConnection()
+        data = obj.single_ride(rideId)
+        return jsonify({"result": data})
+
+
+class requestARide(Resource):
+    """class for requesting a ride"""
+    @classmethod
+    @jwt_required
+    def post(cls):
+        data = request.get_json()
+        req = RequestClass()
+        info = req.getdriver(data)
+        driver = get_jwt_identity()
+        user = int(driver[0])
+        request_object = req.create_requests(data,user,info)
+        return jsonify({"created request":request_object})
+
+class createUser(Resource):
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
     """class where a user creates a ride"""
     @classmethod
     def post(cls):
         """ a user can create a ride here """
+<<<<<<< HEAD
         try:
             data = request.get_json()
             obj  = UserData()
@@ -95,6 +154,19 @@ class CreateUser(Resource):
 
 
 class GetAllUsers(Resource):
+=======
+        data = request.get_json()
+        obj  = UserData()
+        result = obj.insert_into_users(data["firstname"], data["lastname"], data["username"],
+                                    data["password"], data["gender"],data["contact"],
+                                    data["country"], data["city"])
+        response = jsonify(result)
+        response.status_code = 201
+        return response
+
+
+class getAllUsers(Resource):
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
     """class for getting all available rides"""
     @classmethod
     @jwt_required
@@ -104,6 +176,7 @@ class GetAllUsers(Resource):
         result = obj.fetch_users()
         return jsonify({"result":result})
 
+<<<<<<< HEAD
 
 class LoginUser(Resource):
     """class for logging in user"""
@@ -139,3 +212,36 @@ class Respond(Resource):
         response = jsonify(result)
         response.status_code = 201
         return response  
+=======
+class loginUser(Resource):
+    @classmethod   
+    def post(cls):
+        data = request.get_json() 
+        obj = UserData() 
+        result = obj.login(data["username"], data["password"])
+        response = jsonify(result)
+        response.status_code = 201
+        return response
+
+class AllRequests(Resource):
+    """class for getting all available rides"""
+    @classmethod
+    def get(cls,rideId):
+        req = RequestClass()
+        result = req.get_requests(rideId)
+        return jsonify({"result":result})    
+
+class Respond(Resource):
+    @classmethod
+    def post(cls):
+        data = request.get_json()
+        req=RequestClass()
+        result = req.request_status(data["status"], data["request_id"])
+        response = jsonify(result)
+        response.status_code = 201
+        return response        
+
+
+
+
+>>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
