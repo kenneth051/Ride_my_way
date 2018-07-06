@@ -1,5 +1,4 @@
 """Initializing API files"""
-<<<<<<< HEAD
 from flask_restful import Api
 class Routes():
     """class defining routes"""
@@ -17,7 +16,6 @@ class Routes():
         api.add_resource(LoginUser, "/API/v1/auth/login")
         api.add_resource(AllRequests, "/API/v1/users/rides/<rideId>/requests")
         api.add_resource(Respond, "/users/rides/<rideId>/requests/<requestId>")
-=======
 class Routes():
         
     def initialize(self,APP):
@@ -36,4 +34,3 @@ class Routes():
         API.add_resource(loginUser, "/API/v1/auth/login")
         API.add_resource(AllRequests, "/API/v1/users/rides/<rideId>/requests")
         API.add_resource(Respond,"/users/rides/<rideId>/requests/<requestId>")
->>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
