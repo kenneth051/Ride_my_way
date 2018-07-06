@@ -33,12 +33,6 @@ class CreateARide(Resource):
         except:
             return jsonify({"result": "check inputs"})           
 
-
-class GetAllRides(Resource):
-    """class for getting all available rides"""
-    @classmethod
-    @jwt_required
-=======
 from flask_restful import Api,Resource
 from flask_jwt_extended import (create_access_token,jwt_required,get_jwt_identity)
 
@@ -66,12 +60,10 @@ class createARide(Resource):
 class getAllRides(Resource):
     """class for getting all available rides"""
     @classmethod
->>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
     def get(cls):
         obj = RidesConnection()
         result = obj.fetch_rides()
         return result
-<<<<<<< HEAD
         return jsonify({"result": result})
 
 
@@ -101,8 +93,7 @@ class RequestARide(Resource):
         request_object = req.create_requests(num, user, info)
         return jsonify({"created request":request_object})
 
-class CreateUser(Resource):
-=======
+
 
 
 class getRide(Resource):
@@ -212,7 +203,6 @@ class Respond(Resource):
         response = jsonify(result)
         response.status_code = 201
         return response  
-=======
 class loginUser(Resource):
     @classmethod   
     def post(cls):
@@ -244,4 +234,3 @@ class Respond(Resource):
 
 
 
->>>>>>> 04066aafaee1e0c8b07c1e61922780dcd9aca85d
