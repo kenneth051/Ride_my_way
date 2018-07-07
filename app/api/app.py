@@ -175,36 +175,3 @@ class Respond(Resource):
         response = jsonify(result)
         response.status_code = 201
         return response
-
- 
-class loginUser(Resource):
-    @classmethod   
-    def post(cls):
-        data = request.get_json() 
-        obj = UserData() 
-        result = obj.login(data["username"], data["password"])
-        response = jsonify(result)
-        response.status_code = 201
-        return response
-
-class AllRequests(Resource):
-    """class for getting all available rides"""
-    @classmethod
-    def get(cls,rideId):
-        req = RequestClass()
-        result = req.get_requests(rideId)
-        return jsonify({"result":result})    
-
-class Respond(Resource):
-    @classmethod
-    def post(cls):
-        data = request.get_json()
-        req=RequestClass()
-        result = req.request_status(data["status"], data["request_id"])
-        response = jsonify(result)
-        response.status_code = 201
-        return response        
-
-
-
-

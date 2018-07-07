@@ -40,29 +40,7 @@ class RequestClass(Database):
             data = cur.fetchone()
             return data
 
-    def single_ride(self,_id):
-        """ a method to get a ride """
-        cur = self.con.cursor()
-        cur.execute("SELECT * FROM Rides where ride_id = %s ", (_id,));
-        affected=cur.rowcount
-        result=cur.fetchall()
-        if affected >0: 
-            data = {}
-            lst = []
-            for row in result:
-                data["ride_id"] = row[0]
-                data["ride_from"] = row[1]
-                data["ride_to"] = row[2]
-                data["ride_date"] = row[3]
-                data["ride_time"] = row[4]
-                data["cost"] = row[5]
-                data["driver_id"] = row[6]
-                lst.append(data)
-            return lst
-        else:
-            response = jsonify({"message":"invalid ride Id"})
-            return response 
-
+   
     def get_requests(self, rideId):
         """ a method to get a request"""
         cur = self.con.cursor()
