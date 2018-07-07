@@ -28,8 +28,4 @@ class ValidateUsers():
              result= "PASSWORD MUST BE 8 CHARACTERS"    
         else:
              result= True
-        return result     
-
-data = ValidateUsers("ken", "joseph", "dumba", "123456", "", "werrttt", "kla", "ug")
-if(data.validate_empty()):
-        print("yes")
+        return result
