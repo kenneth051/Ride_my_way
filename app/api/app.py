@@ -32,18 +32,6 @@ class CreateARide(Resource):
         except:
             return jsonify({"result": "check inputs"})           
 
-<<<<<<< HEAD:app/api/app.py
-=======
-from flask_restful import Api,Resource
-from flask_jwt_extended import (create_access_token,jwt_required,get_jwt_identity)
-
-from app.models.ridedb import RidesConnection
-from app.models.request import RequestClass
-from app.models.userdata import UserData
-
-
-
->>>>>>> 7bd5e9be2a7353b2864c9ee79746a82a5b0fd610:app/api/api.py
 
 class createARide(Resource):
     """class where a user creates a ride"""
@@ -65,10 +53,6 @@ class getAllRides(Resource):
     def get(cls):
         obj = RidesConnection()
         result = obj.fetch_rides()
-<<<<<<< HEAD:app/api/app.py
-=======
-        return result
->>>>>>> 7bd5e9be2a7353b2864c9ee79746a82a5b0fd610:app/api/api.py
         return jsonify({"result": result})
 
 
@@ -98,11 +82,6 @@ class RequestARide(Resource):
         request_object = req.create_requests(num, user, info)
         return jsonify({"created request":request_object})
 
-<<<<<<< HEAD:app/api/app.py
-=======
-
-
->>>>>>> 7bd5e9be2a7353b2864c9ee79746a82a5b0fd610:app/api/api.py
 
 class getRide(Resource):
     """class for getting a specific ride"""
@@ -195,13 +174,9 @@ class Respond(Resource):
         result = req.request_status(data["status"], data["request_id"])
         response = jsonify(result)
         response.status_code = 201
-<<<<<<< HEAD:app/api/app.py
         return response
 
  
-=======
-        return response  
->>>>>>> 7bd5e9be2a7353b2864c9ee79746a82a5b0fd610:app/api/api.py
 class loginUser(Resource):
     @classmethod   
     def post(cls):
@@ -210,9 +185,6 @@ class loginUser(Resource):
         result = obj.login(data["username"], data["password"])
         response = jsonify(result)
         response.status_code = 201
-<<<<<<< HEAD:app/api/app.py
-        return response  
-=======
         return response
 
 class AllRequests(Resource):
@@ -236,4 +208,3 @@ class Respond(Resource):
 
 
 
->>>>>>> 7bd5e9be2a7353b2864c9ee79746a82a5b0fd610:app/api/api.py
