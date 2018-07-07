@@ -12,7 +12,7 @@ class ValidateRides():
         """method to validate my input registeration files"""
         if (self.ride_from1 == "" or self.ride_to1 == "" or self.ride_date1 == ""
             or self.ride_time1 == "" or self.cost1 == "" or self.driver_id == ""):
-             return"INPUTS CANNOT BE EMPTY FILL IN ALL FIELDS PLEASE"
+            return"INPUTS CANNOT BE EMPTY FILL IN ALL FIELDS PLEASE"
         elif (type(self.ride_from1) != str or type(self.ride_time1) != str or 
               type(self.driver_id) != str or type(self.ride_to1) != str
               or type(self.cost1) != str  or type(self.ride_date1) != str):

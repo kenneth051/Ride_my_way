@@ -27,5 +27,5 @@ class ValidateUsers():
         elif len(self.password) < 8:
              result= "PASSWORD MUST BE 8 CHARACTERS"    
         else:
-             result= True
+            result= True
         return result

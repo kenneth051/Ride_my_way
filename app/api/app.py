@@ -30,22 +30,8 @@ class CreateARide(Resource):
             else:
                 return jsonify({"result":info})
         except:
-            return jsonify({"result": "check inputs"})           
-
-
-class createARide(Resource):
-    """class where a user creates a ride"""
-    @classmethod
-    def post(cls):
-        data = request.get_json()
-        driver = get_jwt_identity()
-        obj = RidesConnection()
-        result=obj.create_ride(data["ride_from"], data["ride_to"],
-                     data["ride_date"], data["ride_time"], data["cost"], data["driver_id"])
-        response = jsonify(result)
-        response.status_code = 201
-        return response
-
+            return jsonify({"result": "check inputs"}
+          
 
 class getAllRides(Resource):
     """class for getting all available rides"""
@@ -64,32 +50,6 @@ class GetRide(Resource):
         """class for getting a ride"""
         obj = RidesConnection()
         data = obj.single_ride(rideid)
-        return jsonify({"result": data})
-
-
-class RequestARide(Resource):
-    """class for requesting a ride"""
-    @classmethod
-    @jwt_required
-    def post(cls, rideid):
-        """method for requesting for a ride"""
-        data = request.get_json()
-        req = RequestClass()
-        num = int(data["id"])
-        info = req.getdriver(num)
-        driver = get_jwt_identity()
-        user = data = driver[0]
-        request_object = req.create_requests(num, user, info)
-        return jsonify({"created request":request_object})
-
-
-class getRide(Resource):
-    """class for getting a specific ride"""
-    @classmethod
-    @jwt_required
-    def get(cls, rideId):
-        obj = RidesConnection()
-        data = obj.single_ride(rideId)
         return jsonify({"result": data})
 
 
