@@ -33,7 +33,7 @@ class CreateARide(Resource):
             return jsonify({"result": "check inputs"}
           
 
-class getAllRides(Resource):
+class GetAllRides(Resource):
     """class for getting all available rides"""
     @classmethod
     def get(cls):
@@ -53,7 +53,7 @@ class GetRide(Resource):
         return jsonify({"result": data})
 
 
-class requestARide(Resource):
+class RequestARide(Resource):
     """class for requesting a ride"""
     @classmethod
     @jwt_required
@@ -66,7 +66,7 @@ class requestARide(Resource):
         request_object = req.create_requests(data,user,info)
         return jsonify({"created request":request_object})
 
-class createUser(Resource):
+class CreateUser(Resource):
     """class where a user creates a ride"""
     @classmethod
     def post(cls):
@@ -90,7 +90,7 @@ class createUser(Resource):
             return jsonify({"result":"Error with what your sending"})
 
 
-class getAllUsers(Resource):
+class GetAllUsers(Resource):
     """class for getting all available rides"""
     @classmethod
     @jwt_required
