@@ -1,0 +1,12 @@
+[
+  "api/tests/test_api.py::FlaskTestCase::test_Create_A_Ride_wrong_data",
+  "api/tests/test_api.py::FlaskTestCase::test_Creating_A_Ride",
+  "api/tests/test_api.py::FlaskTestCase::test_Request_as_get",
+  "api/tests/test_api.py::FlaskTestCase::test_Request_without_sendingdata",
+  "api/tests/test_api.py::FlaskTestCase::test_for_get_api",
+  "api/tests/test_api.py::FlaskTestCase::test_for_get_api_invalid_url",
+  "api/tests/test_api.py::FlaskTestCase::test_get_ride",
+  "api/tests/test_api.py::FlaskTestCase::test_get_ride_bad_id",
+  "api/tests/test_api.py::FlaskTestCase::test_good_request",
+  "api/tests/test_api.py::FlaskTestCase::test_request_with_wrong_url_info"
+]

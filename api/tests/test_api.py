@@ -1,10 +1,7 @@
 """API test page"""
 import unittest
 import json
-import os
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-from run import APP
+from api import APP
 
 
 class FlaskTestCase(unittest.TestCase):
