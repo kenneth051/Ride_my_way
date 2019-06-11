@@ -1,3 +1,10 @@
+[![Coverage Status](https://coveralls.io/repos/github/kenneth051/Ride_my_way/badge.svg)](https://coveralls.io/github/kenneth051/Ride_my_way)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/d738db88c1cfa7bd44d8/maintainability)](https://codeclimate.com/github/kenneth051/Ride_my_way/maintainability)
+
+[![Build Status](https://travis-ci.org/kenneth051/Ride_my_way.svg?branch=dev)](https://travis-ci.org/kenneth051/Ride_my_way)
+
+
 # Ride_my_way
 repository for carpooling website
 this is a repository about a carpooling website.i have upload the GUIs, API endpoints for challenge 2 and 3.
@@ -43,10 +50,3 @@ i have so far used html, css and python as well as javascript. python is on the 
  open the folder, run the start the server by running the  run.py file
  the endpoints are available in a folder called "api" and the databases in a folder called "models" 
 
-
-
-[![Coverage Status](https://coveralls.io/repos/github/kenneth051/Ride_my_way/badge.svg)](https://coveralls.io/github/kenneth051/Ride_my_way)
-
-<a href="https://codeclimate.com/github/kenneth051/Ride_my_way/maintainability"><img src="https://api.codeclimate.com/v1/badges/5121dd921a17292f244d/maintainability" /></a>
-
-[![Build Status](https://travis-ci.org/kenneth051/Ride_my_way.svg?branch=dev)](https://travis-ci.org/kenneth051/Ride_my_way)
